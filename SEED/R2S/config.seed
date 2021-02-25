@@ -3,7 +3,7 @@ CONFIG_KERNEL_BUILD_DOMAIN="buildhost"
 CONFIG_KERNEL_BUILD_USER="builder"
 CONFIG_TARGET_rockchip=y
 CONFIG_TARGET_rockchip_armv8=y
-CONFIG_TARGET_rockchip_armv8_DEVICE_friendlyarm_nanopi-r2s=y
+CONFIG_TARGET_rockchip_armv8_DEVICE_friendlyarm_nanopi-r4s=y
 CONFIG_TARGET_ROOTFS_PARTSIZE=960
 # CONFIG_COLLECT_KERNEL_DEBUG is not set
 
@@ -40,6 +40,7 @@ CONFIG_PACKAGE_iptables-mod-nat-extra=y
 CONFIG_PACKAGE_kmod-fs-f2fs=y
 CONFIG_PACKAGE_kmod-ipt-nat6=y
 CONFIG_PACKAGE_kmod-tun=y
+CONFIG_PACKAGE_kmod-r8168=y
 CONFIG_PACKAGE_kmod-shortcut-fe=y
 CONFIG_PACKAGE_kmod-fast-classifier=y
 # CONFIG_PACKAGE_kmod-shortcut-fe-cm is not set
@@ -120,13 +121,6 @@ CONFIG_PACKAGE_frpc=y
 CONFIG_PACKAGE_coremark=y
 CONFIG_PACKAGE_htop=y
 CONFIG_PACKAGE_subconverter=y
-CONFIG_PACKAGE_luci-app-oled=y
-
-### ZRAM ###
-CONFIG_PACKAGE_luci-app-compressed-memory=y
-CONFIG_PACKAGE_zram-swap=n
-CONFIG_PACKAGE_block-mount=y
-CONFIG_PACKAGE_swap-utils=y
 
 ### THEME ###
 CONFIG_PACKAGE_luci-theme-argon=y
@@ -186,6 +180,6 @@ CONFIG_LIBCURL_OPENSSL=y
 
 
 ### DOCKER ###（实验性,有需要的删掉下面三行的注释)
-#CONFIG_PACKAGE_luci-app-dockerman=y
-#CONFIG_PACKAGE_luci-app-dockerman_INCLUDE_docker_ce=y
-#CONFIG_PACKAGE_luci-app-dockerman_INCLUDE_ttyd=n
+CONFIG_PACKAGE_luci-app-dockerman=y
+CONFIG_PACKAGE_luci-app-dockerman_INCLUDE_docker_ce=y
+CONFIG_PACKAGE_luci-app-dockerman_INCLUDE_ttyd=n
